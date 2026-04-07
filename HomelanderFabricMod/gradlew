@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+# ------------------------------------------------------------------------------
+# Gradle distribution-specific shell script for invoking Gradle.
+# ------------------------------------------------------------------------------
+APP_BASE_NAME=$(basename "$0")
+APP_HOME=$(dirname "$0")
+if [ "$APP_HOME" = "." ]; then
+  APP_HOME=$(pwd)
+fi
+DEFAULT_JVM_OPTS=""
+JVM_OPTS="$DEFAULT_JVM_OPTS"
+if [ -n "$JAVA_HOME" ] ; then
+  JAVA_EXE="$JAVA_HOME/bin/java"
+else
+  JAVA_EXE=java
+fi
+if [ ! -x "$JAVA_EXE" ] ; then
+  echo "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH."
+  exit 1
+fi
+CLASSPATH="$APP_HOME/gradle/wrapper/gradle-wrapper.jar"
+exec "$JAVA_EXE" $JVM_OPTS -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "homelander",
+  "version": "${version}",
+  "name": "Homelander Powers",
+  "description": "Grants laser vision, flight, and super strength like Homelander.",
+  "authors": ["Generated"],
+  "license": "MIT",
+  "icon": "assets/homelander/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.homelander.HomelanderMod"],
+    "client": ["com.example.homelander.HomelanderClientMod"]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.20.0",
+    "fabric-api": "*"
+  }
+}
